@@ -5,7 +5,7 @@
 (fn [n] (* 2 n)) ;; we omit the name here
 (println "multiply-by-2: " (fn [n] (* 2 n)))
 
-;; Assing function to variable
+;; Assigning function to variable
 (def double-it (fn [n] (* 2 n)))
 (double-it 10)
 
