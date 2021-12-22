@@ -3,7 +3,7 @@
   (:require blottsbook.pricing) ;; Folding require to ns. Note that it is a keyword here
   (:gen-class))
 
-(require '[blottsbook.pricing :as pricing]) ;; Creating separate alias
+;; (require '[blottsbook.pricing :as pricing]) ;; Creating separate alias
 
 ;; Alternative creating separate alias
 ;; Alias created by :as is local!
@@ -12,7 +12,7 @@
 ;;   (:gen-class))
 
 ;; Using var from another namespace usign :refer
-(require '[blottsbook.pricing :refer [discount-rate]])
+;; (require '[blottsbook.pricing :refer [discount-rate]])
 
 ;; You need to define your functions before you use them
 (defn say-welcome [what]
@@ -45,3 +45,8 @@
 ;; :reload only loads new vars to clear out existing vars from ns do :ns-unmap
 (defonce some-value 100) ;; defonce is like a constant
 (ns-unmap *ns* 'some-value)
+
+(defn find-by-title [title books])
+
+(defn divide [a b]
+  (/ a b))
