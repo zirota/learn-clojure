@@ -70,6 +70,12 @@ name-seq ;; Note that even with round brackets its a seq not a list
 ;; count is a function to count letters in a string
 (map (comp count :ticker) financials)
 
+;; doseq
+;; Combines doall + map
+
+(doseq [financial financials]
+  (+ financial 100))
+
 ;; Kinda same as JS reduce
 (def numbers [38 47 96])
 
